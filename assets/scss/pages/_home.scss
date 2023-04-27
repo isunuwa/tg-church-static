@@ -1,0 +1,25 @@
+.hero-welcome {
+  padding-top: 200px;
+}
+
+.tg-welcome {
+  h1 {
+    font-weight: 600;
+  }
+}
+
+.hero-video{
+
+  &_item{
+    max-height: 720px;
+  }
+
+  .hero-link-1{
+    margin: 21px auto -35px;
+  }
+}
+
+.aboutus-info{
+  font-size: 24px;
+  font-weight: 200;
+}

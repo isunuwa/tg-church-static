@@ -1,0 +1,41 @@
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+// =================== start of card reset ===================
+.glass-card {
+  .card {
+    color: $white;
+
+    background: linear-gradient(
+      105.09deg,
+      rgba(255, 255, 255, 0.2) 0%,
+      rgba(255, 255, 255, 0.1) 100%
+    );
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(20px);
+    /* Note: backdrop-filter has minimal browser support */
+    @include transition(background 0.3s ease);
+
+    border-radius: 10px;
+  }
+
+  .card-text {
+    font-weight: 200;
+    text-align: justify;
+    word-spacing: 4px;
+  }
+
+  .card-body {
+    padding: 35px 18px;
+  }
+
+  [class*='col-']{
+    margin-bottom: 20px;
+
+    @include breakpoint(md){
+      margin-bottom: 10px;
+    }
+  }
+}
+// =================== end of card reset ===================

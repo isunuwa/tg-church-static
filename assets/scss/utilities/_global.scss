@@ -1,0 +1,130 @@
+// p-10
+.p {
+  &-10 {
+    padding: 30px;
+    
+    @include breakpoint(sm){
+      padding: 60px;
+    }
+    @include breakpoint(md){
+      padding: 100px;
+    }
+  }
+
+  &t-10 {
+    padding-top: 100px;
+  }
+
+  &b-10 {
+    padding-bottom: 100px;
+  }
+
+  &x-10 {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+
+  &y-10 {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
+
+// m-10
+.m {
+  &-10 {
+    margin: 100px;
+  }
+
+  &t-10 {
+    margin-top: 100px;
+  }
+
+  &b-10 {
+    margin-bottom: 100px;
+  }
+
+  &x-10 {
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+
+  &y-10 {
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+}
+
+// =================== start of wave ===================
+.tg-wave {
+  animation: wave 7s linear;
+  animation-iteration-count: infinite;
+  fill: $primary-dark;
+}
+// wave animation
+@keyframes wave {
+  to {
+    transform: translateX(-100%);
+  }
+}
+// =================== end of wave ===================
+
+// =================== start of heading size ===================
+.tag {
+  &-h1 {
+    font-size: 3rem;
+    line-height: 3.5rem;
+  }
+
+  &-h2 {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+
+  &-h3 {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+
+  &-h4 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  &-h5 {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+}
+// =================== end of heading size ===================
+
+
+// =================== start of theme layout ===================
+.dark-theme {
+  &.tg-section {
+    overflow: hidden;
+    background-color: $primary-dark;
+    color: $white;
+    
+    // background-image: linear-gradient(20deg, #fff, #000);
+  }
+}
+
+.gradient {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 0;
+
+  &.gradient-full {
+    background-color: $primary-dark;
+    color: $white;
+  }
+
+  &.gradient-linear {
+    background-image: linear-gradient(20deg, #fff, #000);
+  }
+}
+// =================== end of theme layout ===================

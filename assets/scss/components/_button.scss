@@ -1,0 +1,18 @@
+.btn {
+  @extend %button-shared;
+}
+
+.hero-link-1 {
+  z-index: 1;
+  width: 90px;
+  height: 90px;
+  background-color: $white;
+  border: 2px solid $tg-primary;
+  border-radius: 200px;
+
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+}

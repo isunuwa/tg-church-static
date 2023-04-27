@@ -1,0 +1,23 @@
+// utilities
+@import 'utilities/variables';
+@import 'utilities/mixins';
+@import 'utilities/extends';
+@import 'utilities/global';
+
+// fonts
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+// reset
+@import 'reset/reset';
+
+// components
+@import 'components/layouts';
+@import 'components/navbar';
+@import 'components/footer';
+@import 'components/button';
+
+// pages
+@import 'pages/home';
+@import 'pages/about_us';
+
+// sass --watch assets/scss/main.scss assets/css/main.css --style compressed
