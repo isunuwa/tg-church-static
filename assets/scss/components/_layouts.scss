@@ -49,7 +49,7 @@
 
   &::before,
   &::after {
-    content: "";
+    content: ""; 
     display: inline-block;
     background-repeat: no-repeat;
     width: 19px;
@@ -61,12 +61,12 @@
 
   &::before {
     left: 0px;
-    background-image: url("assets/svgs/icons/quote-left.svg");
+    background-image: url("../assets/svgs/icons/quote-left.svg");
   }
 
   &::after {
     right: 0px;
-    background-image: url("assets/svgs/icons/quote-right.svg");
+    background-image: url("../assets/svgs/icons/quote-right.svg");
   }
 
   @include breakpoint(sm) {
