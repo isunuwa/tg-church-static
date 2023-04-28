@@ -3,25 +3,6 @@
   padding-bottom: 6vmax;
 }
 
-// tags
-.tag {
-  &-thin {
-    font-weight: 200;
-  }
-
-  &-light {
-    font-weight: 300;
-  }
-
-  &-bold {
-    font-weight: 600;
-  }
-
-  &-bolder {
-    font-weight: 700;
-  }
-}
-
 .page-section {
   min-height: 500px;
   font-size: 42px;
@@ -42,14 +23,27 @@
   flex-wrap: wrap;
 }
 
-.divider-5{
+.divider-5 {
   height: 1px;
   background-color: $grey-light;
   margin-top: 40px;
   margin-bottom: 40px;
 }
 
+.bg-white {
+  background-color: white;
+}
+
 // =================== start of quote section ===================
+.quote {
+  padding-top: 70px;
+  padding-bottom: 20px;
+
+  @include breakpoint(sm) {
+    padding-top: 20px;
+  }
+}
+
 .quote-content {
   position: relative;
 
@@ -66,20 +60,33 @@
   }
 
   &::before {
-    left: -30px;
+    left: 0px;
     background-image: url("../../../assets/svgs/icons/quote-left.svg");
   }
 
   &::after {
-    right: -30px;
+    right: 0px;
     background-image: url("../../../assets/svgs/icons/quote-right.svg");
   }
 
+  @include breakpoint(sm) {
+    &::before {
+      left: -30px;
+    }
+    &::after {
+      right: -30px;
+    }
+  }
+
   .quote-text {
-    font-size: 36px;
+    font-size: 24px;
     font-weight: 600;
     letter-spacing: 1px;
     word-spacing: 2px;
+
+    @include breakpoint(sm) {
+      font-size: 36px;
+    }
   }
 
   .quote-ref {
@@ -115,7 +122,7 @@
 }
 
 .gallery-card {
-  aspect-ratio: 3 / 2;
+  // aspect-ratio: 3 / 2;
   border: 4px solid;
   background-color: $white;
   position: relative;
@@ -149,11 +156,19 @@
 
   .image {
     width: 100%;
-    border: 4px solid;
-    background-color: $grey-thin;
+    // border: 4px solid;
+    background-color: $grey-light;
     aspect-ratio: 1 / 1;
     position: relative;
     overflow: hidden;
+
+    img {
+      width: 100%;
+      position: relative;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
   }
 }
 

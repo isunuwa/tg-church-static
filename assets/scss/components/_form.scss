@@ -1,0 +1,21 @@
+.form-input {
+  &_v2 {
+    display: inline-block;
+    width: 300px;
+
+    @include breakpoint(sm) {
+      width: 450px;
+    }
+
+    .tg-input {
+      padding: 15px 18px;
+      font-weight: 300;
+      font-style: italic;
+    }
+
+    .btn {
+      border: transparent;
+      //   height: 100%;
+    }
+  }
+}

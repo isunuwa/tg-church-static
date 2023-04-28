@@ -95,9 +95,32 @@
     font-size: 1.25rem;
     line-height: 1.75rem;
   }
+
+  &-p{
+    line-height: 1.5rem;
+  }
 }
 // =================== end of heading size ===================
 
+// =================== start of tag style ===================
+.tag {
+  &-thin {
+    font-weight: 200;
+  }
+
+  &-light {
+    font-weight: 300;
+  }
+
+  &-bold {
+    font-weight: 600;
+  }
+
+  &-bolder {
+    font-weight: 700;
+  }
+}
+// =================== end of tag style ===================
 
 // =================== start of theme layout ===================
 .dark-theme {

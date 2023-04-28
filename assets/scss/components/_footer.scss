@@ -29,6 +29,11 @@
     color: $primary-dark;
     text-decoration: none;
     margin-top: 15px;
+    @include transition(color 0.3s ease);
+
+    &:hover{
+      color: $grey;
+    }
   }
 }
 
@@ -42,11 +47,11 @@
 
   &_link {
     text-decoration: none;
-    margin: 2px 4px 2px 0;
+    margin: 2px 5px 2px 0;
     max-width: 25px;
 
     @include breakpoint(md) {
-      margin: 2px 4px;
+      margin: 2px 5px;
     }
   }
 }
