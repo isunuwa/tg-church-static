@@ -83,7 +83,7 @@
     font-weight: 600;
     letter-spacing: 1px;
     word-spacing: 2px;
-
+    padding: 10px 10px 0;
     @include breakpoint(sm) {
       font-size: 36px;
     }
@@ -104,11 +104,11 @@
       @include transform(rotate(5deg));
 
       .card:before {
-        @include transform(translatey(-2%) rotate(-4deg));
+        @include transform(translateY(-2%) rotate(-4deg));
       }
 
       .card:after {
-        @include transform(translatey(-2%) rotate(-4deg));
+        @include transform(translateY(-2%) rotate(-4deg));
       }
     }
   }
@@ -147,11 +147,11 @@
   }
 
   &:before {
-    @include transform(translatey(-2%) rotate(-6deg));
+    @include transform(translateY(-2%) rotate(-6deg));
   }
 
   &:after {
-    @include transform(translatey(2%) rotate(6deg));
+    @include transform(translateY(2%) rotate(6deg));
   }
 
   .image {
