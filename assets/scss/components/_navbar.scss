@@ -10,9 +10,13 @@
   z-index: 9999;
 }
 
+.nav-logo,
+.burger-box {
+  z-index: 5;
+}
+
 .nav-content {
   position: relative;
-  z-index: 2;
   pointer-events: auto;
 
   display: flex;
@@ -20,6 +24,46 @@
   align-items: center;
 }
 
+.tg-menu-item {
+  .menu-item-link {
+    position: relative;
+    color: $grey;
+    font-weight: 600;
+    font-size: 6vw;
+    margin-bottom: 20px;
+    text-decoration: none;
+    display: inline-block;
+    @include transition(color 0.3s ease);
+
+    &::before {
+      position: absolute;
+      width: 0;
+      height: 4px;
+      top: 55%;
+      transform: translateY(-50%);
+      background-color: $tg-primary;
+      @include transition(width 0.3s ease);
+    }
+
+    &:hover {
+      color: $white;
+      &::before {
+        width: 110%;
+      }
+    }
+
+    @include breakpoint(sm) {
+      margin-bottom: 5px;
+      font-size: 4vw;
+      
+      &::before {
+        content: "";
+        height: 20px;
+      }
+    }
+  }
+}
+// =================== start of burger menu design ===================
 .burger {
   cursor: pointer;
 }
@@ -55,7 +99,7 @@
 
   &.nav-menu-icon-doubleLineHamburger {
     .top-bun {
-      @include transform(translatey(-5.5px));
+      @include transform(translateY(-5.5px));
     }
 
     .patty {
@@ -63,7 +107,68 @@
     }
 
     .bottom-bun {
-      @include transform(translatey(5.5px));
+      @include transform(translateY(5.5px));
     }
   }
 }
+// =================== end of burger menu design ===================
+
+// =================== start of navbar contents ===================
+// update the burger menu to cross
+.nav-items {
+  &.active {
+    .nav-menu-icon-doubleLineHamburger {
+      .top-bun {
+        @include transform(rotate(44deg));
+      }
+      .bottom-bun {
+        @include transform(rotate(-44deg));
+      }
+    }
+    .nav-menu-overlay {
+      opacity: 1;
+      visibility: visible;
+    }
+    .nav-menu-bg-overlay {
+      width: 300vw;
+      height: 300vh;
+    }
+  }
+}
+
+.nav-menu-content {
+  z-index: 2;
+  width: 65%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.nav-menu-overlay {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10em;
+  position: fixed;
+  top: 0%;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  @include transition(all 0.3s ease);
+}
+
+.nav-menu-bg-overlay {
+  height: 0;
+  width: 0;
+  background-color: $primary-dark;
+  border-radius: 100%;
+  position: absolute;
+  @include transition(background-color 0.3s ease);
+}
+// =================== end of navbar contents ===================
