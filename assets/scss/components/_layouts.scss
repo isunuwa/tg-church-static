@@ -49,7 +49,7 @@
 
   &::before,
   &::after {
-    content: ""; 
+    content: "";
     display: inline-block;
     background-repeat: no-repeat;
     width: 19px;
@@ -178,3 +178,29 @@
   }
 }
 // =================== end of gallery section ===================
+
+// =================== start of typo section ===================
+.typo {
+  &1 {
+    .body-copy {
+      font-weight: 300;
+    }
+  }
+}
+// =================== end of typo section ===================
+
+// =================== start of content block section ===================
+.tg-contentBlock{
+  .rich-text-container{
+    letter-spacing: 0.02em;
+
+    [class*="tag-h"]{
+      margin-bottom: 6px;
+    }
+  }
+}
+
+.page-block{
+  padding: 45px 0;
+}
+// =================== end of content block section ===================
