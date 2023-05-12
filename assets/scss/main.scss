@@ -16,9 +16,10 @@
 @import 'components/footer';
 @import 'components/button';
 @import 'components/form';
+@import 'components/icons';
 
 // pages
 @import 'pages/home';
-@import 'pages/about_us';
+@import 'pages/aboutus';
 
 // sass --watch assets/scss/main.scss assets/css/main.css --style compressed

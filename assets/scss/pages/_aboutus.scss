@@ -1,0 +1,19 @@
+.message-person {
+  padding: 5px 0;
+  margin-bottom: 5px;
+  cursor: pointer;
+  @include transition(color 0.3s ease);
+
+  &:hover {
+    color: $tg-primary;
+
+    .message-icon {
+      background-color: $tg-primary;
+    }
+  }
+
+  .message-icon {
+    padding: 0;
+    @include transition(background-color 0.3s ease);
+  }
+}

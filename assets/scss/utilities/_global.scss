@@ -2,11 +2,11 @@
 .p {
   &-10 {
     padding: 30px;
-    
-    @include breakpoint(sm){
+
+    @include breakpoint(sm) {
       padding: 60px;
     }
-    @include breakpoint(md){
+    @include breakpoint(md) {
       padding: 100px;
     }
   }
@@ -96,7 +96,7 @@
     line-height: 1.75rem;
   }
 
-  &-p{
+  &-p {
     line-height: 1.5rem;
   }
 }
@@ -128,11 +128,11 @@
 
 // =================== start of theme layout ===================
 .dark-theme {
-  &.tg-section {
+  &.tg-section,
+  &.tg-innerBody {
     overflow: hidden;
     background-color: $primary-dark;
     color: $white;
-    
     // background-image: linear-gradient(20deg, #fff, #000);
   }
 }
