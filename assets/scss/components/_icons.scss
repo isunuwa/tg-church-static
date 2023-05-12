@@ -1,0 +1,11 @@
+.message-icon {
+  &.light {
+    background-color: white;
+  }
+
+  &.rounded {
+    border-radius: 100% !important;
+    padding: 10px;
+    margin-left: 5px;
+  }
+}

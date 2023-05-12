@@ -23,15 +23,62 @@
   flex-wrap: wrap;
 }
 
-.divider-5 {
+.tg-divider {
   height: 1px;
   background-color: $grey-light;
-  margin-top: 40px;
-  margin-bottom: 40px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  &.inner-col {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  &.sep-2 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    @include breakpoint(md) {
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &.sep-3 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+    @include breakpoint(md) {
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+  }
+
+  &.sep-4 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    @include breakpoint(md) {
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
+  }
+
+  &.sep-5 {
+    margin-top: 25px;
+    margin-bottom: 25px;
+
+    @include breakpoint(md) {
+      margin-top: 50px;
+      margin-bottom: 50px;
+    }
+  }
 }
 
-.bg-white {
-  background-color: white;
+.bg {
+  &-primary-dark {
+    background-color: $primary-dark;
+  }
 }
 
 // =================== start of quote section ===================
@@ -190,17 +237,17 @@
 // =================== end of typo section ===================
 
 // =================== start of content block section ===================
-.tg-contentBlock{
-  .rich-text-container{
+.tg-contentBlock {
+  .rich-text-container {
     letter-spacing: 0.02em;
 
-    [class*="tag-h"]{
+    [class*="tag-h"] {
       margin-bottom: 6px;
     }
   }
 }
 
-.page-block{
+.page-block {
   padding: 45px 0;
 }
 // =================== end of content block section ===================
