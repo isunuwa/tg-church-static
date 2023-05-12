@@ -166,6 +166,14 @@
   max-width: 400px;
   margin: 0 auto;
   @include transition(0.25s ease);
+
+  @include breakpoint(sm) {
+    width: 75%;
+  }
+  
+  @include breakpoint(md) {
+    width: 65%;
+  }
 }
 
 .gallery-card {
@@ -221,7 +229,7 @@
 
 .pastor-wrapper {
   [class*="col-"] {
-    margin-bottom: 3.5rem;
+    margin-bottom: 5rem;
   }
 }
 // =================== end of gallery section ===================
