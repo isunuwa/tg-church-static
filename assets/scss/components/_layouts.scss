@@ -146,8 +146,9 @@
 
 // =================== start of quote section ===================
 .gallery-stack-wrapper {
-  &:hover {
-    .stack {
+  // &:hover {
+  .stack {
+    &:hover {
       @include transform(rotate(5deg));
 
       .card:before {
@@ -165,14 +166,25 @@
   width: 85%;
   max-width: 400px;
   margin: 0 auto;
+  position: relative;
   @include transition(0.25s ease);
 
   @include breakpoint(sm) {
     width: 75%;
   }
-  
+
   @include breakpoint(md) {
     width: 65%;
+  }
+
+  .stack-link{
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
   }
 }
 
