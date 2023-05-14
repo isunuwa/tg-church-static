@@ -158,6 +158,10 @@
       .card:after {
         @include transform(translateY(-2%) rotate(-4deg));
       }
+
+      img {
+        filter: none;
+      }
     }
   }
 }
@@ -177,8 +181,8 @@
     width: 65%;
   }
 
-  .stack-link{
-    content: '';
+  .stack-link {
+    content: "";
     position: absolute;
     top: 0;
     bottom: 0;
@@ -230,11 +234,14 @@
     overflow: hidden;
 
     img {
+      filter: grayscale(100%);
       width: 100%;
       position: relative;
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
+
+      @include transition(filter 0.3s ease);
     }
   }
 }
@@ -271,3 +278,40 @@
   padding: 45px 0;
 }
 // =================== end of content block section ===================
+
+.ps-description {
+  position: relative;
+  margin-top: -50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @include breakpoint(sm) {
+    margin-top: -200px;
+    flex-direction: row;
+  }
+
+  .ps-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-top: 30px;
+    order: 2;
+
+    @include breakpoint(sm) {
+      margin-top: 150px;
+      order: 1;
+    }
+  }
+
+  .ps-dp {
+    @include breakpoint(sm) {
+      order: 2;
+    }
+    
+    img {
+      width: 200px;
+      height: 200px;
+    }
+  }
+}
