@@ -152,9 +152,18 @@
       <div class="tg-body typo1 page-block">
         <div class="container">
           <div class="row mt-5 mb-10">
-            <!-- our code / beliefs -->
             <div class="col-md-10 mx-auto tg-contentBlock">
               <div class="body-copy rich-text-container">
+                <div class="content-texts who-ami ps-description mb-5">
+                  <div class="ps-details tag-light">
+                    <p>Location: Halgada, Itahari</p>
+                    <p>Year of Joining: 2001</p>
+                  </div>
+                  <div class="ps-dp">
+                    <img src="assets/images/ps/ps-mahan.jpg" alt="Pastor Image">
+                  </div>
+                </div>
+                
                 <div class="content-texts mb-5">
                   <div class="tag-h4 tag-bold mb-2">My Story</div>
                   <p>
@@ -192,14 +201,16 @@
                   </p>
                 </div>
                 <!-- start of gallery carousel -->
-                <div class="ps-carousel-wrapper tg-carousel arrow-outside">
-                  <div class="owl-carousel ps-carousel">
-                    <div>
-                      <img src="assets/images/banners/banner-1.png" alt="gallery pictuer">
-                    </div>
-                    <div>
-                      <img src="assets/images/banners/banner-1.png" alt="gallery pictuer">
-                    </div>
+                <div class="ps-carousel-wrapper arrow-outside">
+                  <div class="owl-carousel tg-carousel_v1 owl-loaded">
+                    <img
+                      src="assets/images/banners/banner-1.png"
+                      alt="gallery picture"
+                    />
+                    <img
+                      src="assets/images/users/user-portrait-1.png"
+                      alt="gallery picture"
+                    />
                   </div>
 
                   <div class="icon-arrow-left"></div>
@@ -314,25 +325,28 @@
       crossorigin="anonymous"
     ></script>
     <script src="assets/js/navbar.js"></script>
-            dot: true
     <script src="assets/js/jQuery.min.js"></script>
     <script src="assets/js/owlcarousel/owl.carousel.min.js"></script>
 
     <script defer>
-      $(".ps-carousel").owlCarousel({
+      $(".tg-carousel_v1").owlCarousel({
         loop: true,
         margin: 10,
-        navText: ["<div class='icon-arrow icon-arrow-left' aria-label='Previous'></div>", "<div class='icon-arrow icon-arrow-right' aria-label='Next'></div>"],
+        autoHeight: true,
+        navText: [
+          "<div class='icon-arrow icon-arrow-left' aria-label='Previous'></div>",
+          "<div class='icon-arrow icon-arrow-right' aria-label='Next'></div>",
+        ],
         responsive: {
           0: {
             items: 1,
-            nav:false,
-            dots: true
+            nav: false,
+            dots: true,
           },
           1000: {
             items: 1,
-            nav:true,
-            dots: false
+            nav: true,
+            dots: false,
           },
         },
       });
