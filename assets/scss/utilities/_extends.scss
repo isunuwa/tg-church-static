@@ -2,5 +2,52 @@
 %button-shared {
   color: white;
   border: 1px solid $primary-dark;
+  background-color: $primary-dark;
   cursor: pointer;
+}
+
+%btn-primary-shared{
+  padding: 8px 30px;
+  cursor: pointer;
+  @include transition(color 0.3s ease);
+
+  &:hover{
+    color: $grey-light;
+  }
+}
+
+%image-cover {
+  object-fit: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+%offset-border-shared {
+  position: relative;
+  border-width: 2px;
+  margin-top: 12px;
+  margin-left: 12px;
+  margin-right: 12px;
+
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: "";
+    transform: translate(-12px, -12px);
+    // border: solid 2px $tg-primary;
+    border: solid 2px $grey;
+    z-index: -1;
+  }
+  
+  &-white {
+    border-color: $grey;
+  }
+
+  // size
+  &-large {
+    border-width: 3px;
+  }
 }

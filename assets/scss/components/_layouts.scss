@@ -158,10 +158,6 @@
       .card:after {
         @include transform(translateY(-2%) rotate(-4deg));
       }
-
-      img {
-        filter: none;
-      }
     }
   }
 }
@@ -234,14 +230,11 @@
     overflow: hidden;
 
     img {
-      filter: grayscale(100%);
       width: 100%;
       position: relative;
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
-
-      @include transition(filter 0.3s ease);
     }
   }
 }

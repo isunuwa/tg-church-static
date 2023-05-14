@@ -1,0 +1,81 @@
+.tg-gallery {
+  &_column{
+    margin-bottom: 14px;
+    
+    @include breakpoint(sm){
+      margin-bottom: 24px;
+    }
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    @extend %image-cover;
+    
+    @include breakpoint(sm){
+      aspect-ratio: 1/1;
+    }
+  }
+
+  .gallery_thumb {
+    height: 100%;
+    cursor: pointer;
+  }
+  
+}
+
+
+// start of filter grayscale color
+.gallery_thumb,
+.gallery-card {
+  &:hover {
+    img {
+      filter: none;
+    }
+  }
+
+  img {
+    @include breakpoint(sm){
+      filter: grayscale(100%);
+      @include transition(filter 0.3s ease);
+    }
+  }
+}
+// end of filter grayscale color
+
+.gallery-highlight{
+  .highlight{
+    &-img{
+      margin: 20px 0;
+      padding: 100px 0;
+      position: relative;
+      overflow: hidden;
+
+      &::before{
+        position: absolute;
+        content: '';
+        background-color: $primary-dark;
+        top: 0;
+        bottom: 0;
+        left: 125px;
+        right: -50vw;
+        
+        @include breakpoint(md){
+          left: 200px;
+        }
+      }
+      
+      img{
+        position: relative;
+        height: 250px;
+        width: 250px;
+        @extend %image-cover;
+        
+        @include breakpoint(md){
+          height: 400px;
+          width: 400px;
+        }
+      }
+    }
+  }
+}
