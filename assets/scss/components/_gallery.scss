@@ -70,15 +70,16 @@
     }
   }
 
+  &:hover {
+    img{
+      filter: none;
+    }
+  }
+  
   img {
     @include breakpoint(sm) {
       filter: grayscale(100%);
       @include transition(filter 0.3s ease);
-    }
-    @include transition(filter 0.3s ease);
-
-    &:hover {
-      filter: none;
     }
   }
 }
