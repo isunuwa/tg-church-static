@@ -1,0 +1,79 @@
+.tg-card {
+  padding: 28px;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 100px;
+    height: 100px;
+    top: -100px;
+    right: -100px;
+    border-radius: 100px;
+    background-color: $tg-primary;
+
+    @include transition(all 0.3s ease);
+  }
+
+  &:hover {
+    &::before {
+      top: -45px;
+      right: -45px;
+    }
+  }
+
+  &-heading {
+    margin-bottom: 16px;
+  }
+
+  &-text {
+    font-size: 14px;
+  }
+
+  .text-list-item {
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
+  .list-item {
+    &-icon {
+      margin-right: 8px;
+    }
+
+    &-text {
+      a {
+        text-decoration: none;
+        color: $black;
+        @include transition(color 0.3s ease);
+
+        &:hover {
+          color: $tg-primary !important;
+        }
+      }
+    }
+  }
+}
+
+// start of dark theme color
+.tg-card-section {
+  &.card-dark {
+    .tg-card {
+      background-color: $primary-dark;
+      color: #c3c3c3;
+
+      .tg-card-heading {
+        color: $white;
+      }
+    }
+
+    .list-item-text {
+      a {
+        color: #c3c3c3;
+      }
+    }
+  }
+}
+// end of dark theme color
