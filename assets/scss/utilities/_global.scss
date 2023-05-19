@@ -112,6 +112,10 @@
     font-weight: 300;
   }
 
+  &-regular {
+    font-weight: 400;
+  }
+
   &-semibold {
     font-weight: 500;
   }
@@ -163,5 +167,13 @@
   &-4 {
     padding-top: calc(var(--bs-gutter-x) * 0.5);
     padding-bottom: calc(var(--bs-gutter-x) * 0.5);
+  }
+}
+
+
+// 
+.tg-text{
+  &-primary{
+    color: $tg-primary;
   }
 }

@@ -5,7 +5,12 @@
 
 .page-section {
   min-height: 500px;
-  font-size: 42px;
+
+  .acc-info {
+    &-title {
+      font-size: 42px;
+    }
+  }
 
   &.hero-welcome {
     min-height: 650px;
@@ -301,7 +306,7 @@
     @include breakpoint(sm) {
       order: 2;
     }
-    
+
     img {
       width: 200px;
       height: 200px;
